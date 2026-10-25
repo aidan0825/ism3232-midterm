@@ -141,7 +141,15 @@ def test_format_line_mixed_boolean_values():
     assert format_shipment_line("Shop", 700.01, False, True) == (
         "Shop: $700.01 | prepayment: no | pallet: yes"
     )
+
+
 def test_shipment_zero_bags_still_adds_shipping_fee():
     assert round(calculate_shipment_total(10.00, 0), 2) == 35.00
+
+
 def test_shipment_at_20_bags_without_partner():
     assert round(calculate_shipment_total(20.00, 20), 2) == 364.00
+
+
+def test_shipping_fee_just_below_threshold():
+    assert round(calculate_shipment_total(249.99, 1), 2) == 284.99
