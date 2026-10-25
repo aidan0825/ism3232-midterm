@@ -51,6 +51,3 @@ The test suite includes **28 tests** covering all eight functions and all six bo
 - `tests/__init__.py` — Marks the tests folder as a Python package.
 - `tests/test_business_rules.py` — Pytest checks for every business rule and function.
 
-## AI Use Statement
-
-AI assistance was used to generate the initial Python code, tests, and documentation; the final repository and terminal verification should reflect the actual work performed.
