@@ -5,6 +5,7 @@ SECOND_BULK_TIER = 80
 STANDARD_BULK_DISCOUNT = 0.09
 LARGE_BULK_DISCOUNT = 0.14
 PARTNER_EXTRA_DISCOUNT = 0.04
+NO_DISCOUNT = 0.0
 SHIPPING_FEE = 35.00
 FREE_SHIPPING_THRESHOLD = 250.00
 PREPAYMENT_THRESHOLD = 1500.00
@@ -24,7 +25,9 @@ def get_bulk_discount(bags: int, partner: bool = False) -> float:
     elif bags >= FIRST_BULK_TIER:
         discount = STANDARD_BULK_DISCOUNT
     else:
-        discount = 0.0
+    
+        discount = NO_DISCOUNT
+
 
     if partner and bags >= FIRST_BULK_TIER:
         discount += PARTNER_EXTRA_DISCOUNT
