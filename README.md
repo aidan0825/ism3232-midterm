@@ -6,17 +6,21 @@
 
 ## What This Program Does
 
-This Python program generates a wholesale coffee shipment report for Copper Kettle Coffee Roasters. It calculates each buyer's shipment cost after any volume and partner discounts, adds shipping fees where appropriate, and marks shipments requiring prepayment or a freight pallet. The report also summarizes the overall shipment activity.
+This program will create a shipment report for Copper Kettle Coffee Roasters that shows the cost of each customer's shipment, including discounts if applicable and shipping fees. It will also indicate if the customer has to prepay or if their order needs to be shipped using a freight pallet. The report also gives information about the total shipments..
 
 ## Business Rules
 
-1. The starting bean cost is the price of one bag multiplied by the bag count.
-2. Shipments under 20 bags receive no volume discount; 20–79 bags receive 9%; and 80 or more receive 14%.
-3. Partner cafes receive an additional four percentage points of discount when ordering at least 20 bags.
-4. A $35 shipping charge applies when the discounted bean cost is below $250.
-5. Shipment totals of $1,500 or more require prepayment.
-6. A shipment requires a freight pallet only when it contains more than 60 bags **and** its total exceeds $700.
+Bean cost starts as the cost per bag multiplied by the number of bags.
 
+There is no volume discount if the shipment is less than 20 bags. Orders of 20–79 bags get a 9% discount, and orders of 80 or more bags get a 14% discount.
+
+If a customer is a partner cafe and orders 20 or more bags, they will get an extra 4 percentage points off their order.
+
+If the bean cost after the discount is less than $250, a $35 shipping fee will be added.
+
+Customers must prepay if their shipment total is $1,500 or more.
+
+If a shipment contains more than 60 bags and its total is over $700, it will require a freight pallet.
 ## How to Run
 
 On macOS or Linux, inside the repository folder:
