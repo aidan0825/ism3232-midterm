@@ -153,3 +153,5 @@ def test_shipment_at_20_bags_without_partner():
 
 def test_shipping_fee_just_below_threshold():
     assert round(calculate_shipment_total(249.99, 1), 2) == 284.99
+def test_shipment_at_80_bags_with_partner_discount():
+    assert round(calculate_shipment_total(10.00, 80, True), 2) == 656.00
