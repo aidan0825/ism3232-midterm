@@ -143,3 +143,5 @@ def test_format_line_mixed_boolean_values():
     )
 def test_shipment_zero_bags_still_adds_shipping_fee():
     assert round(calculate_shipment_total(10.00, 0), 2) == 35.00
+def test_shipment_at_20_bags_without_partner():
+    assert round(calculate_shipment_total(20.00, 20), 2) == 364.00
